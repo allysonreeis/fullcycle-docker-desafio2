@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
     connection.query(select, (err, result, fields) => {
         res.send(`<h1>Full Cycle Rocks!</h1>
-            ${!!result.length ? result.map(el => `<ol><li>${el.name}</li> </ol>`).join('') : ''}
+            ${!!result.length ? result.map(el => `<ul><li>${el.name}</li> </ul>`).join('') : ''}
         `)
     })
 

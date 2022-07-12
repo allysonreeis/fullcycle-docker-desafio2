@@ -5,7 +5,7 @@ services:
     build:
       context: mysql
       dockerfile: Dockerfile
-    image: mysql:5.7
+    image: allysonreeis/mysql
     container_name: db
     command: --innodb-use-native-aio=0
     tty: true
@@ -42,7 +42,7 @@ services:
     image: allysonreeis/nginx
     container_name: nginx
     ports:
-      - "80:80"
+      - "8080:80"
     networks:
       - nodenet
     depends_on:
